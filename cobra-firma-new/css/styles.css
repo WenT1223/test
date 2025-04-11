@@ -1,0 +1,464 @@
+* {
+    scrollbar-width: auto;
+    scrollbar-color: green #fff;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+.smooth_scroll {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* NAVIGATION */
+.div_for_nav {
+    justify-content: center;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    z-index: 50;
+} 
+nav {
+    height: 6rem;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, .85);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.div_in_nav {
+    height: 6rem;
+    width: 100%;
+    padding: 0 10rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    display: flex;
+}
+.nav_logo {
+    color: transparent;
+    width: 4rem;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.text_in_nav {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.text_in_nav>a {
+    text-decoration: none;
+    color: black;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.text_in_nav>a:hover {
+    color: green;
+    transition: .3s;
+}
+
+/* MAIN */
+main {
+    flex-grow: 1;
+    width: 100%;
+}
+main>div, section {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+}
+section {
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* INTRO */
+.intro_div_for_text {
+    width: 66.666667%;
+    padding-right: 10rem;
+}
+.intro_poem {
+    color: green;
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 2rem 0;
+}
+.intro_text{
+    color: black;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 2rem 0;
+}
+.intro_div_for_image {
+    width: 33.333333%;
+    display: flex;
+}
+.intro_div_for_image>img {
+    max-width: 100%;
+    width: 15rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* O NAS */
+.o-nas {
+    margin-top: 10rem;
+    background: url(/images/o-nas_background.webp);
+    clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    scroll-margin-top: 10rem;
+}
+.o-nas_div_for_image {
+    width: 50%;
+}
+.o-nas_div_for_image>img {
+    max-width: 100%;
+    width: 30rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: .5rem;
+}
+.o-nas_div_for_text {
+    width: 50%;
+}
+.o-nas_heading {
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+.o-nas_text{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.zisti_viac {
+    color: white;
+    border: 2px solid white;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: max-content;
+    text-decoration: none;
+}
+.zisti_viac:hover {
+    color: green;
+    background: white;
+    transition: 0.3s;
+}
+.zisti_viac:active {
+    outline:none;
+    box-shadow:0 0 10px white;
+    transition: 0.2s;
+}
+
+/* AKCIE */
+.akcie {
+    margin-top: 5rem;
+    flex-direction: column;
+    scroll-margin-top: 10rem;
+}
+.akcie_heading {
+    color: green;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+}
+.akcie_div_for_akcie {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    row-gap: 3rem;
+}
+.akcie_div_for_akcie>img {
+    width: 15rem;
+    border-radius: 0.75rem;
+}
+.akcie_div_for_akcie>img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    /* filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); */
+    transition: 0.3s;
+}
+dialog {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 66.666667%;
+    min-height: 20rem;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+.exit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: green;
+    font-size: 1.75rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+.exit:hover {
+    filter: brightness(0.8);
+    transition: 0.3s;
+    transform: scale(1.1)
+}
+dialog>h2 {
+    color: green;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+dialog>p {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+.dialog_zisti_viac {
+    color: green;
+    background: white;
+    border: 2px solid green;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: max-content;
+    text-decoration: none;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+.dialog_zisti_viac:hover {
+    color: white;
+    background: green;
+    transition: 0.3s;
+}
+.dialog_zisti_viac:active {
+    outline:none;
+    box-shadow:0 0 10px green;
+    transition: 0.2s;
+}
+
+/* AKCIE - MIKINY */
+.mikiny_div_for_group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.mikiny_div_for_image {
+    width: 60%;
+}
+.mikiny_div_for_image img {
+    width: 100%;
+}
+.mikiny_div_for_form {
+    width: 40%;
+}
+.mikiny_div_for_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.mikiny_form_row {
+    display: flex;
+    flex-direction: column;
+}
+.mikiny_form_row label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.mikiny_form_row input,
+.mikiny_form_row select {
+    padding: 0.375rem 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.mikiny_form_row input:focus,
+.mikiny_form_row select:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 5px green;
+}
+.other_poem {
+    margin-top: 1rem;
+}
+
+/* AKCIE - FL */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+/* FOTO */
+.foto {
+    margin-top: 7rem;
+    flex-direction: column;
+    scroll-margin-top: 10rem;
+}
+.foto_heading {
+    color: green;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.foto_sub_heading {
+    color: purple;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+.foto_div_for_foto {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 0;
+    width: 100%;
+} 
+.foto_thumbnail {
+    width: 16.666667%;
+    cursor: pointer;
+    border-radius: 0.75rem;
+    transition: transform 0.3s;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+.foto_thumbnail:hover {
+    transform: scale(1.1);
+}
+  
+/* fullscreen modal */
+.foto_modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.foto_modal_content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+} 
+.close_btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 3rem;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+.close_btn:hover {
+    filter: brightness(0.8);
+    transition: 0.3s;
+    transform: scale(1.05)
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    user-select: none;
+    z-index: 1001;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.prev {
+    left: 1rem;
+}
+.next {
+    right: 1rem;
+}
+.foto_mvt,
+.foto_ples {
+    scroll-margin: 11rem;
+}
+
+/* KONTAKT */
+.kontakt {
+    margin-top: 10rem;
+    background: url(/images/o-nas_background.webp);
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    scroll-margin-top: 10rem;
+}
